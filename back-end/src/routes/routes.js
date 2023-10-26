@@ -1,8 +1,8 @@
 import { Router } from "express";
 
 // Importando as rotas definidas em outros arquivos.
-import userRouter from "./user.routes";
-import authRouter from "./auth.routes";
+import userRouter from "./user.routes.js";
+import authRouter from "./auth.routes.js";
 
 // Criando um objeto de roteamento chamado 'router' usando o módulo 'Router' do Express.
 const router = Router();
