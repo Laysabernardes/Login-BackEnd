@@ -1,10 +1,10 @@
-import mongoose from"mongoose";// Importa a biblioteca "mongoose" para interagir com o MongoDB.
-import userService from "../services/user.service.js";//essa variavel ta no use.crontrolles.js
+const mongoose = require("mongoose");// Importa a biblioteca "mongoose" para interagir com o MongoDB.
+const userService = require("../services/user.service.js");//essa variavel ta no use.crontrolles.js
 // Importa o serviço "userService" que contém funções relacionadas a usuários, definido em "user.service.js"
 
 //É exportado uma função que verifica a validade de um ID na solicitação HTTP.
 //(req, res, next) é uma convenção para receber objetos req e res que representam a solicitação e a resposta HTTP, bem como a função next, que é usada para controlar o fluxo da execução entre middlewares 
-export const validId = (req, res, next) => {
+const validId = (req, res, next) => {
     try {
         const id = req.params.id; // Extrai o valor do parâmetro "id" da solicitação HTTP e o armazena na variável "id".
 
@@ -21,7 +21,7 @@ export const validId = (req, res, next) => {
 };
 
 //async em uma função indica que ela pode conter operações assíncronas e permite o uso de await para aguardar a conclusão dessas operações sem bloquear a execução do código.
-export const validUser = async (req, res, next) => {
+const validUser = async (req, res, next) => {
     try {
         const id = req.params.id;
 
@@ -41,3 +41,8 @@ export const validUser = async (req, res, next) => {
         res.status(500).send({ message: err.mensage })
     }
 };
+
+module.exports = {
+    validId,
+    validUser
+}

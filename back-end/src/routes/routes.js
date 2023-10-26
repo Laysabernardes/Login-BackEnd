@@ -1,8 +1,8 @@
-import { Router } from "express";
+const {Router} = require("express");
 
 // Importando as rotas definidas em outros arquivos.
-import userRouter from "./user.routes.js";
-import authRouter from "./auth.routes.js";
+const userRouter = require("./user.routes");
+const authRouter = require("./auth.routes");
 
 // Criando um objeto de roteamento chamado 'router' usando o módulo 'Router' do Express.
 const router = Router();
@@ -11,4 +11,4 @@ const router = Router();
 router.use("/users", userRouter);// Roteia todas as solicitações para "/users" para as rotas definidas em 'userRouter'.
 router.use("/auth", authRouter);// Roteia todas as solicitações para "/auth" para as rotas definidas em 'authRouter'.
 
-export default router;
+module.exports = router;

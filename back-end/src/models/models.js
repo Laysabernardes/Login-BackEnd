@@ -1,6 +1,6 @@
 //Models é a forma de bolo de um usuário
-import mongoose from 'mongoose'; // Importa o módulo "mongoose", que é usado para definir esquemas (schemas) e interagir com o MongoDB.
-import bcrypt from "bcryptjs"; // Importa o módulo "bcryptjs" para criptografar senhas.
+const mongoose = require('mongoose'); // Importa o módulo "mongoose", que é usado para definir esquemas (schemas) e interagir com o MongoDB.
+const bcrypt = require("bcryptjs");  // Importa o módulo "bcryptjs" para criptografar senhas.
 
 //Schema é uma metodo do mongoose
 //Define o schema ou seja a estrutura dos documentos de usuário
@@ -38,4 +38,4 @@ const User = mongoose.model("User", UserSchema);
 // Define o modelo "User" baseado no esquema "UserSchema".
 //cria uma "caixa" chamada User que define como os dados dos usuários são armazenados e recuperados no banco de dados.
 
-export default User;
+module.exports = User;

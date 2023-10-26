@@ -1,4 +1,4 @@
-import User from "../models/models.js";
+const User = require("../models/models.js");
 //.create, .find, .findById , .findOneAndUpdate são metodos do mongoose. 
 
 const createService = (body) => User.create(body);// Função para criar um novo usuário no bd
@@ -9,4 +9,9 @@ const findByIdService = (id) => User.findById(id);// Função para encontrar um 
 const updateService = (id,name,email,password,avatar) => User.findOneAndUpdate({_id: id},{name,email,password,avatar});
 // { _id: id } é o critério de consulta para encontrar o usuário pelo ID. E o restante são valores a serem atualizados.
 
-export default {createService, findAllService, findByIdService, updateService};
+module.exports = {
+    createService,
+    findAllService,
+    findByIdService,
+    updateService
+};

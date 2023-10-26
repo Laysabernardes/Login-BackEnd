@@ -1,6 +1,6 @@
 // Autentificar o Usuário
-import bcrypt from "bcryptjs";// Importa a biblioteca bcrypt para lidar com a criptografia de senhas.
-import loginService from "../services/auth.service.js";// Importa o serviço de autenticação "loginService".
+const bcrypt = require("bcryptjs");// Importa a biblioteca bcrypt para lidar com a criptografia de senhas.
+const loginService = require("../services/auth.service.js");// Importa o serviço de autenticação "loginService".
 
 class AuthController{
     // Função para processar o login do usuário.
@@ -26,4 +26,4 @@ class AuthController{
     }
 }
 
-export default AuthController
+module.exports = AuthController

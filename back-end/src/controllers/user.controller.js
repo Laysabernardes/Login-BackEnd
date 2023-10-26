@@ -1,4 +1,4 @@
-import userService from "../services/user.service.js"; // Importa o serviço "userService" para lidar com operações relacionadas a usuários.
+const userService = require("../services/user.service.js");// Importa o serviço "userService" para lidar com operações relacionadas a usuários.
 
 class UserController {
     
@@ -89,4 +89,4 @@ class UserController {
     };
 }
 
-export default UserController;
+module.exports = UserController;
