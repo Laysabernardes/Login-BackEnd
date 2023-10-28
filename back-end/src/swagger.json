@@ -7,10 +7,15 @@
         
     },
     "servers":[
-        {
+      {
+        "url":"https://api-login-0qlo.onrender.com",
+        "description":"Render Server"
+      },
+      {
             "url":"http://localhost:3000",
             "description":"local server"
-        }
+      }
+        
     ],
     "paths":{
         
