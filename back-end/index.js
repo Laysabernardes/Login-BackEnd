@@ -14,5 +14,6 @@ app.use(express.json()); //Middleware do Express, permiti que a aplicação rece
 app.use(routes);// Middleware que adiciona as rotas definidas no módulo 'routes' à aplicação
 // Isso permite que o Express encaminhe solicitações HTTP para as rotas corretas
 
+
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
 // Iniciar o servidor na porta especificada

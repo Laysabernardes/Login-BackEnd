@@ -17,7 +17,7 @@ class AuthController{
             if(!passwordIsValid){
                 return res.status(400).send({message: "Usuário ou senha não incorreto"});
             }
-            res.send("Login executado!");   
+            res.send("Login executado!!");   
                      
         } catch(err){
             res.status(500).send(err.message);
