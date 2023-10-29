@@ -6,7 +6,7 @@ var cors = require('cors');
  
 const app = express()// Cria uma instância do Express chamada 'app'
 app.use(cors());
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 // 'process.env.PORT' é a porta definida na variável de ambiente (para deploy em nuvem)
 // Se a variável de ambiente não estiver definida, utiliza a porta 3000
 
