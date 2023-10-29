@@ -2,8 +2,10 @@
 const express = require("express");// Importa o módulo Express para criar um servidor
 const connectDatabase = require("./src/bd/bd.js");// Importa uma função para conectar ao banco de dados
 const routes = require("./src/routes/routes.js");// Importa as rotas da aplicação
+var cors = require('cors');
  
 const app = express()// Cria uma instância do Express chamada 'app'
+app.use(cors());
 const port = process.env.PORT || 3000;
 // 'process.env.PORT' é a porta definida na variável de ambiente (para deploy em nuvem)
 // Se a variável de ambiente não estiver definida, utiliza a porta 3000

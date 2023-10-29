@@ -5,10 +5,10 @@ class UserController {
     // Função para criar um novo usuário.
     create = async (req, res) => {
         try {// Extrai os campos do usuário (name, username, email, password, avatar) da solicitação.
-            const { name, email, password, avatar} = req.body;
+            const { name, email, password} = req.body;
 
             // Verifica se todos os campos obrigatórios foram fornecidos na solicitação.
-            if (!name || !email || !password || !avatar) {
+            if (!name || !email || !password ) {
                 res.status(400).send({ message: "Preencha todos os campos para o registro" });
             }
 
@@ -25,8 +25,8 @@ class UserController {
                 user: {
                     id: user._id,
                     name,
-                    email,
-                    avatar,
+                    email
+                    
                 }
             });
         } catch (err) {
@@ -65,10 +65,10 @@ class UserController {
     update = async (req, res) => {
         try {
             // Extrai os campos a serem atualizados (name, username, email, password, avatar) da solicitação.
-            const { name, email, password, avatar} = req.body;
+            const { name, email, password} = req.body;
 
             // Verifica se pelo menos um campo deve ser atualizado.
-            if (!name && !email && !password && !avatar) {
+            if (!name && !email && !password) {
                 res.status(400).send({ message: "Submita pelo menos um  campo para fazer o Update" });
             };
 
@@ -79,8 +79,7 @@ class UserController {
                 id,
                 name,
                 email,
-                password,
-                avatar,            
+                password           
             );
             res.send({ message: "Usuario foi atualizado com sucesso!" });
         } catch (err) {

@@ -19,10 +19,6 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         select:false, // Evita que a senha seja selecionada por padrão em consultas.
-    },
-    avatar: {
-        type: String,
-        required: true,
     }
 })
 

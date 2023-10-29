@@ -6,7 +6,7 @@ const findAllService = () => User.find();// Função para encontrar todos os usu
 const findByIdService = (id) => User.findById(id);// Função para encontrar um usuário pelo seu ID no bd
 
 // Função para atualizar as informações de um usuário no banco de dados com base no ID.
-const updateService = (id,name,email,password,avatar) => User.findOneAndUpdate({_id: id},{name,email,password,avatar});
+const updateService = (id,name,email,password) => User.findOneAndUpdate({_id: id},{name,email,password,avatar});
 // { _id: id } é o critério de consulta para encontrar o usuário pelo ID. E o restante são valores a serem atualizados.
 
 module.exports = {
